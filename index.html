@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>わたし朝刊 − サポート</title>
+<style>
+  :root {
+    --bg: #f2ede1; --card: #fbf8f0; --text: #1c1a16; --sub: #6a6356;
+    --accent: #9c2f24; --accent2: #b9483a; --border: #ddd5c3; --rule: #d9d1bf;
+    --shadow: 0 8px 30px rgba(60, 45, 20, 0.08);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #17150f; --card: #201d16; --text: #ece6d8; --sub: #a79f8e;
+      --accent: #e0796a; --accent2: #eda091; --border: #353026; --rule: #353026;
+      --shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 20px 80px; }
+  header {
+    text-align: center;
+    padding: 56px 20px 40px;
+    border-bottom: 3px double var(--text);
+    max-width: 720px; margin: 0 auto;
+  }
+  .logo { font-size: 52px; margin-bottom: 10px; }
+  header h1 {
+    font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
+    font-size: 34px; font-weight: 700; letter-spacing: 0.12em;
+  }
+  header p { margin-top: 10px; font-size: 15px; color: var(--sub); }
+  h2 {
+    font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
+    font-size: 20px; font-weight: 700; margin: 48px 0 18px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  h2 .em { font-size: 22px; }
+  .card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 14px; padding: 22px 24px; box-shadow: var(--shadow);
+    margin-bottom: 14px;
+  }
+  .feature { display: flex; gap: 14px; align-items: flex-start; }
+  .feature .ic { font-size: 24px; flex-shrink: 0; line-height: 1.4; }
+  .feature h3 { font-size: 16px; margin-bottom: 2px; }
+  .feature p { font-size: 14px; color: var(--sub); }
+  details {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 12px; padding: 4px 20px; margin-bottom: 10px;
+  }
+  summary {
+    font-size: 15px; font-weight: 600; cursor: pointer;
+    padding: 14px 24px 14px 0; list-style: none; position: relative;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after {
+    content: "＋"; position: absolute; right: 0; color: var(--accent);
+    font-weight: 400;
+  }
+  details[open] summary::after { content: "－"; }
+  details p { font-size: 14px; color: var(--sub); padding: 0 0 16px; }
+  details a { color: var(--accent); }
+  .contact {
+    text-align: center; background: var(--card); border: 1px solid var(--border);
+    border-radius: 14px; padding: 28px; box-shadow: var(--shadow);
+  }
+  .contact a.button {
+    display: inline-block; margin-top: 12px; padding: 12px 28px;
+    background: var(--accent);
+    color: #fff; text-decoration: none; border-radius: 999px; font-weight: 600;
+  }
+  @media (prefers-color-scheme: dark) {
+    .contact a.button { color: #1c1410; }
+  }
+  footer { text-align: center; margin-top: 40px; font-size: 13px; color: var(--sub); }
+  footer a { color: var(--accent); }
+  .note a { color: var(--accent); }
+  .note { font-size: 13px; color: var(--sub); text-align: center; margin-top: 8px; }
+  .source { font-size: 13px; color: var(--sub); }
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">🗞️</div>
+  <h1>わたし朝刊</h1>
+  <p>きょうの予定が、一面トップになる。</p>
+</header>
+<div class="wrap">
+  <h2><span class="em">✨</span>わたし朝刊とは</h2>
+  <div class="card">
+    <p>毎朝1部だけ届く、<strong>自分専用の新聞</strong>です。カレンダーの予定が一面の大見出しになり、天気、為替、気になるニュースの見出し、きのうのメモが、縦書きの紙面に並びます。iPhone Duo では、開くと見開きになります。折りたためない iPhone でも使えます。広告はありません。</p>
+  </div>
+  <h2><span class="em">🎯</span>使い方</h2>
+  <div class="card feature"><div class="ic">🗞️</div><div><h3>一面</h3><p>その日の予定から、大見出しと本文を組みます。時間割の図で、空いている時間がわかります。題字の下は、きょうの天気です。</p></div></div>
+  <div class="card feature"><div class="ic">📰</div><div><h3>二面</h3><p>予定の表、為替、気になる見出し、メモ、編集後記が並びます。見出しを押すと、元の記事をブラウザで開きます。</p></div></div>
+  <div class="card feature"><div class="ic">📖</div><div><h3>iPhone Duo では</h3><p>開くと、右が一面、左が二面の見開きになります。上下に開いても読めます。閉じたままでも一面を読めて、横にめくると二面です。</p></div></div>
+  <div class="card feature"><div class="ic">📱</div><div><h3>折りたためない iPhone では</h3><p>一面と二面を、1ページずつ読みます。横にずらすか、下の「一面」「二面」の札で切り替えます。</p></div></div>
+  <div class="card feature"><div class="ic">🌆</div><div><h3>夕刊</h3><p>夕方（はじめは17時）からあとに開くと、あすの予定と天気を書いた「わたし夕刊」に替わります。時刻は「編集部」で変えられます。</p></div></div>
+  <div class="card feature"><div class="ic">⚡</div><div><h3>速報</h3><p>号を組んだあとでカレンダーに予定が入ると、次に開いたとき、紙面の上に【速報】の帯で知らせます。</p></div></div>
+  <div class="card feature"><div class="ic">✏️</div><div><h3>メモ</h3><p>紙面の下の「メモを書く」から書きます。書いたメモは、あすの朝刊と夕刊に「きのうのメモ」として載ります。「きょうの紙面から」を選ぶと、きょうの紙面にもすぐ朱で載ります。「あすの朝刊から」を選ぶと、あすの朝刊から載ります。</p></div></div>
+  <div class="card feature"><div class="ic">🛠️</div><div><h3>編集部</h3><p>紙面の下の「編集部」で、天気の地域、為替の通貨と載せる値、気になる見出しの RSS、夕刊の時刻を変えられます。バックナンバーも、ここから読み返せます。</p></div></div>
+  <h2><span class="em">📚</span>紙面に載せている情報</h2>
+  <div class="card">
+    <p class="source">天気は、気象庁ホームページの天気予報を、短い言い回しに直して載せています。為替は、各国の中央銀行などが公表する参考レートを Frankfurter がまとめた値（取れないときは、欧州中央銀行のユーロ参考為替レート）で、市場のいまの値でも、取引のための値でもありません。見出しは、登録した RSS の見出しと出どころだけを載せています。</p>
+  </div>
+  <h2><span class="em">❓</span>よくある質問</h2>
+  <details><summary>予定が紙面に出ません</summary><p>端末の「設定」→「アプリ」→「わたし朝刊」で、カレンダーへのアクセスが「フルアクセス」になっているかをご確認ください。許可したあと、「編集部」の「いまの紙面を組み直す」で組み直せます。</p></details>
+  <details><summary>天気や為替が「休載」になります</summary><p>通信できなかったときに出ます。電波のよいところで開き直すと、取れなかった欄だけを取り直します。</p></details>
+  <details><summary>為替の値が、ほかのアプリと違います</summary><p>載せているのは、各国の中央銀行などが公表する参考値で、市場のいまの値ではありません。1日に数回しか変わりません。取引の判断には使わないでください。</p></details>
+  <details><summary>書いたメモが、次の日に消えました</summary><p>メモは、書いた日の次の日の夕刊まで載ります。その次の日には、紙面から外れます。前の日の紙面は、「編集部」のバックナンバーから読み返せます。</p></details>
+  <details><summary>RSS は、いくつ登録できますか？</summary><p>はじめは1件です。「編集部」→「気になる見出し（RSS）」の「RSS を増やす」から、買い切りのアプリ内課金で、3件まで登録できるようになります。機種を変えたときは、同じところの「購入を復元」を押してください。</p></details>
+  <details><summary>通知は来ますか？</summary><p>いいえ。紙面は、アプリを開いたときに組みます。</p></details>
+  <details><summary>データはどこに保存されますか？</summary><p>お使いの端末の中だけです。予定とメモを、端末の外へ送ることはありません。詳しくは<a href="privacy.html">プライバシーポリシー</a>をご覧ください。</p></details>
+  <details><summary>機種変更のとき、データは引き継げますか？</summary><p>iPhone のバックアップから復元するか、iPhone 同士で直接転送すると、設定、メモ、バックナンバーが引き継がれます。</p></details>
+  <h2><span class="em">✉️</span>お問い合わせ</h2>
+  <div class="contact">
+    <p>ご質問・ご要望・不具合のご報告はこちらへ。<br>できる限りお返事します🙌</p>
+    <a class="button" href="mailto:t.ao.kawauso@gmail.com?subject=わたし朝刊について">メールで問い合わせる</a>
+    <p class="note">t.ao.kawauso@gmail.com</p>
+    <p class="note">X（旧Twitter）でも受け付けています → <a href="https://x.com/pachiraworks">@pachiraworks</a></p>
+  </div>
+  <footer>
+    <p><a href="privacy.html">プライバシーポリシー</a>　・　<a href="https://x.com/pachiraworks">@pachiraworks</a></p>
+    <p style="margin-top:10px;">© 2026 わたし朝刊</p>
+  </footer>
+</div>
+</body>
+</html>
